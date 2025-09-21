@@ -748,6 +748,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: var(--transition);
         }
 
         .reviewer-info {
@@ -757,6 +758,7 @@
         .reviewer-info h4 {
             margin-bottom: 5px;
             color: var(--white);
+            font-family: 'Raleway', sans-serif;
         }
 
         .stars {
@@ -1228,6 +1230,85 @@
             font-size: 0.9rem;
         }
 
+        /* Thank You Popup */
+        .thank-you-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .thank-you-popup.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .thank-you-content {
+            background: linear-gradient(135deg, var(--dark-secondary) 0%, var(--dark-bg) 100%);
+            max-width: 500px;
+            width: 90%;
+            padding: 50px 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            position: relative;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            transform: scale(0.9);
+            transition: transform 0.4s ease;
+        }
+
+        .thank-you-popup.open .thank-you-content {
+            transform: scale(1);
+        }
+
+        .thank-you-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            color: var(--gold);
+            font-size: 24px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .thank-you-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .thank-you-icon {
+            font-size: 60px;
+            color: var(--gold);
+            margin-bottom: 20px;
+            animation: bounce 1s ease;
+        }
+
+        .thank-you-content h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+
+        .thank-you-content p {
+            color: var(--gray);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .thank-you-content .btn {
+            margin-top: 10px;
+        }
+
         /* Animations */
         @keyframes fadeInDown {
             from {
@@ -1273,6 +1354,27 @@
             100% {
                 box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
             }
+        }
+
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: var(--gold);
+            opacity: 0;
+            z-index: 3001;
+            pointer-events: none;
         }
 
         /* Responsive Design */
@@ -1346,6 +1448,14 @@
                 bottom: 20px;
                 left: 20px;
             }
+
+            .thank-you-content {
+                padding: 40px 30px;
+            }
+
+            .thank-you-content h3 {
+                font-size: 1.8rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -1385,6 +1495,14 @@
             .sticky-cta .btn {
                 padding: 12px 20px;
                 font-size: 12px;
+            }
+
+            .thank-you-content {
+                padding: 30px 20px;
+            }
+
+            .thank-you-content h3 {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -1493,7 +1611,7 @@
                 </div>
                 <div class="dish-card" data-category="main">
                     <div class="dish-image">
-                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Z291cm1ldCUyMGZvb2R8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="Juba Lamb Tagine - slow-cooked lamb with apricots and almonds">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Z291cm1ldCUyMGZvb2D8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="Juba Lamb Tagine - slow-cooked lamb with apricots and almonds">
                         <div class="dish-tags">
                             <span class="dish-tag spicy">Spicy</span>
                         </div>
@@ -1660,7 +1778,7 @@
                         <img src="https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdpbmUlMjB0YXN0aW5nfGVufDB8fDB8fHww&w=1000&q=80" alt="Wine tasting event at Luxe Juba">
                     </div>
                     <div class="event-info">
-                        <span class="event-date">June 15, 2026 | 7:00 PM</span>
+                        <span class="event-date">June 15, 2023 | 7:00 PM</span>
                         <h3>South African Wine Tasting</h3>
                         <p>Join us for an exclusive evening of premium South African wines paired with artisanal cheeses and canapés.</p>
                         <a href="#reservations" class="btn">Reserve Spot</a>
@@ -1671,7 +1789,7 @@
                         <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGl2ZSUyMG11c2ljJTIwZXZlbnR8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="Live jazz music performance">
                     </div>
                     <div class="event-info">
-                        <span class="event-date">June 22, 2026 | 8:00 PM</span>
+                        <span class="event-date">June 22, 2023 | 8:00 PM</span>
                         <h3>Jazz Night with Local Artists</h3>
                         <p>Enjoy an evening of smooth jazz performances while savoring our special three-course menu and signature cocktails.</p>
                         <a href="#reservations" class="btn">Reserve Spot</a>
@@ -1682,7 +1800,7 @@
                         <img src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="Cooking class with professional chef">
                     </div>
                     <div class="event-info">
-                        <span class="event-date">June 30, 2026 | 10:00 AM</span>
+                        <span class="event-date">June 30, 2023 | 10:00 AM</span>
                         <h3>Chef's Table Cooking Class</h3>
                         <p>Learn to prepare traditional South Sudanese dishes with a modern twist in our interactive cooking class led by Executive Chef Michael.</p>
                         <a href="#reservations" class="btn">Reserve Spot</a>
@@ -1833,8 +1951,8 @@
         <div class="container">
             <h2 class="section-title">Stay Updated</h2>
             <p style="text-align: center; margin-bottom: 40px; color: var(--gray); max-width: 600px; margin-left: auto; margin-right: auto;">Subscribe to our newsletter for exclusive offers, event invitations, and culinary insights from our chefs.</p>
-            <form class="newsletter-form">
-                <input type="email" class="newsletter-input" placeholder="Your email address" required>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Your email address" required>
                 <button type="submit" class="btn">Subscribe</button>
             </form>
         </div>
@@ -1951,6 +2069,21 @@
     <!-- Dark Mode Toggle -->
     <div class="dark-mode-toggle" id="dark-mode-toggle">
         <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Thank You Popup -->
+    <div class="thank-you-popup" id="thank-you-popup">
+        <div class="thank-you-content">
+            <button class="thank-you-close" aria-label="Close thank you message">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="thank-you-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Thank You For Subscribing!</h3>
+            <p>You've been added to our exclusive newsletter list. Look forward to special offers, event invitations, and culinary insights delivered straight to your inbox.</p>
+            <button class="btn" id="popup-close-btn">Continue Exploring</button>
+        </div>
     </div>
 
     <script>
@@ -2307,6 +2440,81 @@
         window.addEventListener('scroll', animateOnScroll);
         // Run once on load
         animateOnScroll();
+
+        // Thank you popup functionality
+        const thankYouPopup = document.getElementById('thank-you-popup');
+        const newsletterForm = document.getElementById('newsletter-form');
+        const popupCloseBtn = document.getElementById('popup-close-btn');
+        const thankYouClose = document.querySelector('.thank-you-close');
+
+        function openThankYouPopup() {
+            thankYouPopup.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            createConfetti();
+        }
+
+        function closeThankYouPopup() {
+            thankYouPopup.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        // Newsletter form submission
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('newsletter-email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!email || !emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // In a real application, you would send the data to a server here
+            // For this example, we'll simulate a successful subscription
+            newsletterForm.reset();
+            openThankYouPopup();
+        });
+
+        // Close popup when clicking on close buttons
+        popupCloseBtn.addEventListener('click', closeThankYouPopup);
+        thankYouClose.addEventListener('click', closeThankYouPopup);
+
+        // Close popup when clicking outside the content
+        thankYouPopup.addEventListener('click', (e) => {
+            if (e.target === thankYouPopup) {
+                closeThankYouPopup();
+            }
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && thankYouPopup.classList.contains('open')) {
+                closeThankYouPopup();
+            }
+        });
+
+        // Confetti effect for the thank you popup
+        function createConfetti() {
+            const colors = ['#d4af37', '#f1e5b9', '#ffffff', '#b3b3b3'];
+            const container = document.querySelector('.thank-you-content');
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.width = Math.floor(Math.random() * 10 + 5) + 'px';
+                confetti.style.height = Math.floor(Math.random() * 10 + 5) + 'px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animation = `confettiFall ${Math.random() * 3 + 2}s linear forwards`;
+                document.body.appendChild(confetti);
+                
+                // Remove confetti after animation completes
+                setTimeout(() => {
+                    confetti.remove();
+                }, 5000);
+            }
+        }
     </script>
 </body>
 </html>
