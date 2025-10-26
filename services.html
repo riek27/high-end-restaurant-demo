@@ -3,13 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Advent Agency</title>
-    <meta name="description" content="Discover Advent Agency's comprehensive digital services for luxury home builders.">
+    <title>Website Development Services | Advent Agency</title>
+    <meta name="description" content="Advent Agency specializes in custom website development for luxury home builders. We create exceptional digital experiences that showcase your craftsmanship.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles specific to services page */
+        .service-detail {
+            margin: 4rem 0;
+        }
+        
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .service-feature {
+            padding: 1.5rem;
+            background-color: white;
+            border-left: 3px solid var(--accent-color);
+        }
+        
+        .service-feature h4 {
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        
+        .pricing-table th, .pricing-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .pricing-table th {
+            background-color: var(--accent-color);
+            color: white;
+            font-weight: 500;
+        }
+        
+        .pricing-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .package-name {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .package-price {
+            font-weight: 700;
+            color: var(--accent-color);
+            font-size: 1.25rem;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -41,8 +105,8 @@
         <div class="page-hero-bg"></div>
         <div class="container">
             <div class="hero-content fade-in">
-                <h1>Our Services</h1>
-                <p>Comprehensive digital solutions for luxury home builders</p>
+                <h1>Website Development Services</h1>
+                <p>Custom websites designed specifically for luxury home builders</p>
             </div>
         </div>
     </section>
@@ -50,6 +114,7 @@
     <!-- Services Section -->
     <section class="services">
         <div class="container">
+            <h2 class="section-heading">Our Website Development Services</h2>
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="service-icon">
@@ -57,12 +122,20 @@
                     </div>
                     <h3 class="service-title">Custom Website Design</h3>
                     <p>Bespoke websites that reflect your brand's unique identity and showcase your portfolio with elegance and sophistication.</p>
-                    <ul>
-                        <li>Responsive design for all devices</li>
-                        <li>Custom photography integration</li>
-                        <li>Portfolio and project galleries</li>
-                        <li>Brand-consistent visual identity</li>
-                    </ul>
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <h4>Responsive Design</h4>
+                            <p>Flawless experience on all devices from desktop to mobile</p>
+                        </div>
+                        <div class="service-feature">
+                            <h4>Portfolio Galleries</h4>
+                            <p>Showcase your projects with stunning image galleries</p>
+                        </div>
+                        <div class="service-feature">
+                            <h4>Brand Integration</h4>
+                            <p>Seamlessly incorporate your visual identity</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
@@ -70,12 +143,20 @@
                     </div>
                     <h3 class="service-title">UX & Copywriting</h3>
                     <p>Strategic user experience design and compelling copy that tells your brand story and converts visitors into clients.</p>
-                    <ul>
-                        <li>User journey mapping</li>
-                        <li>Conversion-focused copywriting</li>
-                        <li>Content strategy development</li>
-                        <li>Brand storytelling</li>
-                    </ul>
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <h4>User Journey Mapping</h4>
+                            <p>Intuitive navigation that guides visitors to conversion</p>
+                        </div>
+                        <div class="service-feature">
+                            <h4>Conversion-Focused Copy</h4>
+                            <p>Compelling content that tells your story and drives action</p>
+                        </div>
+                        <div class="service-feature">
+                            <h4>Content Strategy</h4>
+                            <p>Strategic content planning that showcases your expertise</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon">
@@ -83,51 +164,116 @@
                     </div>
                     <h3 class="service-title">SEO Optimization</h3>
                     <p>Search engine optimization strategies to ensure your website ranks for high-value keywords in the luxury home market.</p>
-                    <ul>
-                        <li>Keyword research and strategy</li>
-                        <li>On-page optimization</li>
-                        <li>Local SEO for service areas</li>
-                        <li>Performance monitoring</li>
-                    </ul>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-shopping-cart"></i>
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <h4>Keyword Strategy</h4>
+                            <p>Target high-value search terms in your market</p>
+                        </div>
+                        <div class="service-feature">
+                            <h4>On-Page Optimization</h4>
+                            <p>Technical SEO that improves search visibility</p>
+                        </div>
+                        <div class="service-feature">
+                            <h4>Local SEO</h4>
+                            <p>Optimize for local search in your service areas</p>
+                        </div>
                     </div>
-                    <h3 class="service-title">E-Commerce Solutions</h3>
-                    <p>Online stores for builders offering design services, consultations, or premium building materials.</p>
-                    <ul>
-                        <li>Product catalog setup</li>
-                        <li>Secure payment integration</li>
-                        <li>Inventory management</li>
-                        <li>Customer account systems</li>
-                    </ul>
                 </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="service-title">Digital Marketing</h3>
-                    <p>Comprehensive digital marketing strategies to increase your online visibility and generate qualified leads.</p>
-                    <ul>
-                        <li>Social media management</li>
-                        <li>Email marketing campaigns</li>
-                        <li>Content marketing</li>
-                        <li>PPC advertising</li>
-                    </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Packages Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content fade-in">
+                <h2>Website Development Packages</h2>
+                <p>We offer tailored website development packages designed specifically for luxury home builders. Each package includes our core services with different levels of customization and features.</p>
+                
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Package</th>
+                            <th>Features</th>
+                            <th>Timeline</th>
+                            <th>Investment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="package-name">Essential</td>
+                            <td>
+                                <ul>
+                                    <li>5-Page Custom Website</li>
+                                    <li>Responsive Design</li>
+                                    <li>Basic Portfolio Gallery</li>
+                                    <li>Contact Form</li>
+                                </ul>
+                            </td>
+                            <td>4-5 Weeks</td>
+                            <td class="package-price">$4,500</td>
+                        </tr>
+                        <tr>
+                            <td class="package-name">Professional</td>
+                            <td>
+                                <ul>
+                                    <li>8-Page Custom Website</li>
+                                    <li>Advanced Portfolio with Filtering</li>
+                                    <li>Project Case Studies</li>
+                                    <li>SEO Optimization</li>
+                                    <li>Content Management System</li>
+                                </ul>
+                            </td>
+                            <td>6-8 Weeks</td>
+                            <td class="package-price">$7,500</td>
+                        </tr>
+                        <tr>
+                            <td class="package-name">Premium</td>
+                            <td>
+                                <ul>
+                                    <li>12+ Page Custom Website</li>
+                                    <li>Immersive Project Galleries</li>
+                                    <li>Advanced Animations</li>
+                                    <li>Comprehensive SEO Strategy</li>
+                                    <li>Custom Content Management</li>
+                                    <li>Ongoing Support Package</li>
+                                </ul>
+                            </td>
+                            <td>8-12 Weeks</td>
+                            <td class="package-price">$12,000+</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p class="subtext" style="text-align: center;">All packages include a dedicated project manager, responsive design, and basic training. Custom packages are available for unique requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Overview -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-heading">Our Development Process</h2>
+            <div class="process-steps">
+                <div class="process-step fade-in">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Discovery & Strategy</h3>
+                    <p>We begin with an in-depth consultation to understand your brand, target audience, and project goals.</p>
                 </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3 class="service-title">Maintenance & Support</h3>
-                    <p>Ongoing website maintenance, updates, and technical support to keep your digital presence running smoothly.</p>
-                    <ul>
-                        <li>Regular security updates</li>
-                        <li>Content updates and additions</li>
-                        <li>Performance optimization</li>
-                        <li>Technical support</li>
-                    </ul>
+                <div class="process-step fade-in">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Design & Prototyping</h3>
+                    <p>Creating elegant, user-centric designs that reflect your brand's sophistication and attention to detail.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Development</h3>
+                    <p>Building your website with precision using the latest technologies for performance and reliability.</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Launch & Support</h3>
+                    <p>We ensure a seamless launch and provide ongoing support to maintain your digital presence.</p>
                 </div>
             </div>
         </div>
@@ -138,7 +284,7 @@
         <div class="container">
             <div class="about-content fade-in">
                 <h2>Ready to Elevate Your Digital Presence?</h2>
-                <p>Let's discuss how our services can help you attract more clients and showcase your work effectively.</p>
+                <p>Let's discuss how our website development services can help you attract more clients and showcase your work effectively.</p>
                 <a href="contact.html" class="btn">Get in Touch</a>
             </div>
         </div>
