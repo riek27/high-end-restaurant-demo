@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Advent Agency</title>
+    <meta name="description" content="Get in touch with Advent Agency to discuss your project.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-mountain logo-icon"></i>
+                Advent Agency
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="process.html">Process</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Contact Us</h1>
+                <p>Let's build something exceptional together</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content fade-in">
+                <h2>Get In Touch</h2>
+                <p>Ready for a website that matches the caliber of your work? We'd love to hear about your project and discuss how we can help elevate your digital presence.</p>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Company Name">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" required>
+                                <option value="" disabled selected>Project Type</option>
+                                <option value="website">New Website</option>
+                                <option value="redesign">Website Redesign</option>
+                                <option value="seo">SEO Services</option>
+                                <option value="branding">Branding</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Tell us about your project" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+                
+                <div style="margin-top: 4rem; display: flex; justify-content: space-around; flex-wrap: wrap;">
+                    <div style="text-align: center; margin: 1rem;">
+                        <i class="fas fa-envelope" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                        <h3>Email Us</h3>
+                        <p>hello@adventagency.com</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+            </div>
+            <p class="copyright">© <span id="currentYear"></span> Advent Agency | Crafted with precision. Built for visionaries.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
