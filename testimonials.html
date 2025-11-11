@@ -3,95 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonials | Advent Agency</title>
-    <meta name="description" content="See what our clients say about working with Advent Agency.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <title>Client Testimonials | Haven Homes | Luxury Home Builder</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-mountain logo-icon"></i>
-                Advent Agency
-            </a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav id="nav">
-                <ul>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Haven <span>Homes</span></a>
+                
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="process.html">Process</a></li>
+                    <li class="dropdown">
+                        <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-plus"></i></a>
+                        <div class="dropdown-content">
+                            <a href="services.html#custom-homes">Custom Homes</a>
+                            <a href="services.html#renovations">Renovations</a>
+                            <a href="services.html#interior-design">Interior Design</a>
+                            <a href="services.html#landscape-design">Landscape Design</a>
+                        </div>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                
+                <button class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
             </nav>
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="page-hero-bg"></div>
-        <div class="container">
-            <div class="hero-content fade-in">
-                <h1>Testimonials</h1>
-                <p>Trusted by builders who build excellence</p>
-            </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="mobile-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="mobile-dropdown">
+                <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-plus"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html#custom-homes">Custom Homes</a>
+                    <a href="services.html#renovations">Renovations</a>
+                    <a href="services.html#interior-design">Interior Design</a>
+                    <a href="services.html#landscape-design">Landscape Design</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Header -->
+    <section class="hero" style="height: 60vh; background: linear-gradient(rgba(44, 44, 44, 0.7), rgba(44, 44, 44, 0.7)), url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1>Client Testimonials</h1>
+            <p>Hear from homeowners who have experienced the Haven Homes difference.</p>
         </div>
     </section>
 
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-heading">What Our Clients Say</h2>
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+            </div>
             <div class="testimonial-slider">
-                <div class="testimonial fade-in">
-                    <p class="testimonial-text">Working with Advent Agency transformed our online presence. The website they created perfectly captures the quality and sophistication of our custom homes.</p>
-                    <p class="testimonial-author">Michael Roberts</p>
-                    <p class="testimonial-role">Founder, Prestige Custom Homes</p>
+                <div class="slider-arrow slider-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="slider-arrow slider-next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="testimonial-track">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">Working with Haven Homes was an exceptional experience from start to finish. Their attention to detail and commitment to quality transformed our vision into a home that exceeds our wildest expectations. The entire process was seamless and professional.</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <p>Greenwich Residence</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">The Haven Homes team demonstrated incredible expertise throughout our renovation project. They respected the historical integrity of our home while introducing modern comforts. We couldn't be happier with the results and highly recommend their services.</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Roberts">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4>Michael Roberts</h4>
+                                    <p>Heritage Restoration</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">From the initial design concepts to the final finishes, every aspect of our custom home build was handled with precision and care. The Haven Homes team made us feel like we were their only client, despite their impressive portfolio. Truly outstanding craftsmanship.</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jennifer Lee">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4>Jennifer Lee</h4>
+                                    <p>Modern Cliffside Home</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <div class="slider-dot active"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
                 </div>
             </div>
-            
-            <div class="testimonial-slider" style="margin-top: 4rem;">
-                <div class="testimonial fade-in">
-                    <p class="testimonial-text">The attention to detail in our website design reflects the same precision we apply to our architectural projects. Advent Agency truly understands luxury brands.</p>
-                    <p class="testimonial-author">Sarah Johnson</p>
-                    <p class="testimonial-role">Principal, Johnson Architecture</p>
+        </div>
+    </section>
+
+    <!-- Additional Testimonials -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>More Client Experiences</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="testimonial-content" style="box-shadow: none; padding: 0;">
+                        <p class="testimonial-text">"We were impressed by Haven Homes' ability to stay on budget and timeline while delivering exceptional quality. Their communication throughout the process was outstanding."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-info">
+                                <h4>Robert & Maria Thompson</h4>
+                                <p>Lakeview Estate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="testimonial-content" style="box-shadow: none; padding: 0;">
+                        <p class="testimonial-text">"The interior design team at Haven Homes transformed our space into something truly magical. Their attention to detail and creative solutions exceeded our expectations."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-info">
+                                <h4>Amanda Chen</h4>
+                                <p>Penthouse Renovation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="testimonial-content" style="box-shadow: none; padding: 0;">
+                        <p class="testimonial-text">"Building our dream home with Haven Homes was a collaborative and enjoyable process. They listened to our ideas and brought them to life with incredible skill and vision."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-info">
+                                <h4>James Wilson</h4>
+                                <p>Mountain Retreat</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="testimonial-slider" style="margin-top: 4rem;">
-                <div class="testimonial fade-in">
-                    <p class="testimonial-text">Our new website has generated more qualified leads in three months than we received all last year. The investment has already paid for itself.</p>
-                    <p class="testimonial-author">David Chen</p>
-                    <p class="testimonial-role">CEO, Heritage Builders</p>
-                </div>
+        </div>
+    </section>
+
+    <!-- Project Spotlight -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Client Projects</h2>
             </div>
-            
-            <div class="testimonial-slider" style="margin-top: 4rem;">
-                <div class="testimonial fade-in">
-                    <p class="testimonial-text">Advent Agency took the time to understand our brand and target audience. The result is a website that not only looks beautiful but functions perfectly for our business needs.</p>
-                    <p class="testimonial-author">Emily Wilson</p>
-                    <p class="testimonial-role">Marketing Director, Elite Construction</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="about-image" style="height: 250px;">
+                        <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cliffside Residence">
+                    </div>
+                    <h3>Cliffside Residence</h3>
+                    <p>"Haven Homes created our dream home with breathtaking ocean views. The quality and attention to detail are exceptional."</p>
+                    <p class="service-icon" style="color: var(--gold);">- The Patterson Family</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="about-image" style="height: 250px;">
+                        <img src="https://images.unsplash.com/photo-1540518614846-7eded1027f2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Urban Renovation">
+                    </div>
+                    <h3>Urban Brownstone</h3>
+                    <p>"They transformed our dated brownstone into a modern masterpiece while preserving its historical character."</p>
+                    <p class="service-icon" style="color: var(--gold);">- The Martinez Family</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="about-image" style="height: 250px;">
+                        <img src="https://images.unsplash.com/photo-1585329063179-50368791d953?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Country Estate">
+                    </div>
+                    <h3>Country Estate</h3>
+                    <p>"From the architecture to the landscaping, every element of our home reflects Haven Homes' commitment to excellence."</p>
+                    <p class="service-icon" style="color: var(--gold);">- The Williams Family</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="about">
+    <section class="testimonials" style="background: var(--charcoal); color: var(--white);">
         <div class="container">
-            <div class="about-content fade-in">
-                <h2>Ready to Join Our Satisfied Clients?</h2>
-                <p>Let's create a digital experience that reflects the quality of your work and helps grow your business.</p>
-                <a href="contact.html" class="btn">Get Started</a>
+            <div class="section-title">
+                <h2 style="color: var(--white);">Ready to Begin Your Project?</h2>
+                <p style="color: var(--beige); max-width: 600px; margin: 0 auto;">Join our satisfied clients and experience the Haven Homes difference. Let's discuss how we can bring your vision to life.</p>
+                <a href="contact.html" class="btn" style="margin-top: 30px;">Schedule Consultation</a>
             </div>
         </div>
     </section>
@@ -99,12 +237,49 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Haven <span>Homes</span></div>
+                    <p>Creating extraordinary living experiences through exceptional design, craftsmanship, and attention to detail.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul>
+                        <li><a href="services.html#custom-homes">Custom Homes</a></li>
+                        <li><a href="services.html#renovations">Renovations</a></li>
+                        <li><a href="services.html#interior-design">Interior Design</a></li>
+                        <li><a href="services.html#landscape-design">Landscape Design</a></li>
+                        <li><a href="services.html">Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to receive updates on our latest projects and design insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="Your Email Address">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
             </div>
-            <p class="copyright">© <span id="currentYear"></span> Advent Agency | Crafted with precision. Built for visionaries.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Haven Homes. All Rights Reserved. | Luxury Home Builders</p>
+            </div>
         </div>
     </footer>
 
