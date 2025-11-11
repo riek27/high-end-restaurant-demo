@@ -248,3 +248,24 @@ if (filterButtons.length > 0 && galleryItems.length > 0) {
         });
     });
 }
+
+// Blog Read More/Less Functionality
+const readMoreButtons = document.querySelectorAll('.read-more-btn');
+if (readMoreButtons.length > 0) {
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const blogText = this.closest('.blog-content').querySelector('.blog-text');
+            const isExpanded = blogText.classList.contains('expanded');
+            
+            if (isExpanded) {
+                // Show less
+                blogText.classList.remove('expanded');
+                this.innerHTML = 'Read More <i class="fas fa-chevron-down"></i>';
+            } else {
+                // Show more
+                blogText.classList.add('expanded');
+                this.innerHTML = 'Read Less <i class="fas fa-chevron-up"></i>';
+            }
+        });
+    });
+}
