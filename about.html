@@ -3,72 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Advent Agency</title>
-    <meta name="description" content="Learn about Advent Agency's mission to create exceptional digital experiences for luxury and custom home builders.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <title>About Us | Haven Homes | Luxury Home Builder</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-mountain logo-icon"></i>
-                Advent Agency
-            </a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav id="nav">
-                <ul>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Haven <span>Homes</span></a>
+                
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="process.html">Process</a></li>
+                    <li class="dropdown">
+                        <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-plus"></i></a>
+                        <div class="dropdown-content">
+                            <a href="services.html#custom-homes">Custom Homes</a>
+                            <a href="services.html#renovations">Renovations</a>
+                            <a href="services.html#interior-design">Interior Design</a>
+                            <a href="services.html#landscape-design">Landscape Design</a>
+                        </div>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                
+                <button class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
             </nav>
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="page-hero-bg"></div>
-        <div class="container">
-            <div class="hero-content fade-in">
-                <h1>About Advent Agency</h1>
-                <p>Where digital craftsmanship meets architectural excellence</p>
-            </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="mobile-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="mobile-dropdown">
+                <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-plus"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html#custom-homes">Custom Homes</a>
+                    <a href="services.html#renovations">Renovations</a>
+                    <a href="services.html#interior-design">Interior Design</a>
+                    <a href="services.html#landscape-design">Landscape Design</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Header -->
+    <section class="hero" style="height: 60vh; background: linear-gradient(rgba(44, 44, 44, 0.7), rgba(44, 44, 44, 0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1>Our Story</h1>
+            <p>Building exceptional homes with passion, precision, and unparalleled craftsmanship since 1998.</p>
         </div>
     </section>
 
     <!-- About Content -->
     <section class="about">
         <div class="container">
-            <div class="about-content fade-in">
-                <h2>Our Story</h2>
-                <p>Founded in 2015, Advent Agency emerged from a simple observation: luxury home builders were creating architectural masterpieces, yet their digital presence often failed to capture the essence of their craftsmanship.</p>
-                <p>We set out to bridge this gap, creating digital experiences that reflect the same attention to detail, quality, and sophistication that our clients pour into every home they build.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Building Dreams Since 1998</h2>
+                    <p>Haven Homes was founded with a singular vision: to create extraordinary living spaces that reflect the unique personalities and lifestyles of our clients while setting new standards for luxury, craftsmanship, and sustainability.</p>
+                    <p>Our journey began when founder Michael Anderson, an architect with a passion for timeless design, recognized the need for a builder who could seamlessly blend architectural excellence with uncompromising construction quality. What started as a small boutique firm has grown into one of the most respected luxury home builders in the region.</p>
+                    <p>Over the past two decades, we've had the privilege of creating more than 150 custom homes and completing countless renovation projects, each one a testament to our commitment to excellence and our clients' vision.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Haven Homes Founder">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Philosophy</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Uncompromising Quality</h3>
+                    <p>We believe that true luxury lies in the details. From foundation to finish, every element of your home is crafted with precision and care using the finest materials available.</p>
+                </div>
                 
-                <h2>Our Approach</h2>
-                <p>At Advent Agency, we believe that a website should be more than just a digital brochure. It should be an immersive experience that tells your brand story, showcases your portfolio, and connects with your ideal clients.</p>
-                <p>We approach each project with the mindset of an architect - carefully planning, designing with purpose, and executing with precision.</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaborative Approach</h3>
+                    <p>Your vision is our blueprint. We work closely with you throughout the entire process, ensuring your home reflects your personality, lifestyle, and aspirations.</p>
+                </div>
                 
-                <h2>Why Work With Us</h2>
-                <ul>
-                    <li>Deep understanding of the luxury home building industry</li>
-                    <li>Focus on storytelling and brand experience</li>
-                    <li>Meticulous attention to detail in every aspect</li>
-                    <li>Proven track record with luxury brands</li>
-                    <li>Ongoing support and partnership</li>
-                </ul>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sustainable Excellence</h3>
+                    <p>We integrate environmentally responsible practices and materials without compromising on luxury, creating homes that are both beautiful and sustainable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Leadership Team</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="about-image" style="height: 300px; margin-bottom: 20px;">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Michael Anderson">
+                    </div>
+                    <h3>Michael Anderson</h3>
+                    <p class="service-icon" style="color: var(--gold); margin-bottom: 10px;">Founder & CEO</p>
+                    <p>With over 25 years of experience in luxury home construction, Michael leads our team with a passion for architectural excellence and client satisfaction.</p>
+                </div>
                 
-                <a href="contact.html" class="btn">Start Your Project</a>
+                <div class="service-card">
+                    <div class="about-image" style="height: 300px; margin-bottom: 20px;">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sarah Chen">
+                    </div>
+                    <h3>Sarah Chen</h3>
+                    <p class="service-icon" style="color: var(--gold); margin-bottom: 10px;">Lead Architect</p>
+                    <p>Sarah brings innovative design solutions and a keen eye for detail to every project, ensuring each home is both beautiful and functional.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="about-image" style="height: 300px; margin-bottom: 20px;">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="David Rodriguez">
+                    </div>
+                    <h3>David Rodriguez</h3>
+                    <p class="service-icon" style="color: var(--gold); margin-bottom: 10px;">Construction Director</p>
+                    <p>David oversees all construction operations with meticulous attention to quality control and project timelines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="testimonials" style="background: var(--charcoal); color: var(--white);">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card" style="background: transparent; box-shadow: none;">
+                    <h2 style="font-size: 3rem; color: var(--gold);">150+</h2>
+                    <h3>Custom Homes Built</h3>
+                    <p>Each one a unique masterpiece</p>
+                </div>
+                
+                <div class="service-card" style="background: transparent; box-shadow: none;">
+                    <h2 style="font-size: 3rem; color: var(--gold);">25</h2>
+                    <h3>Years of Excellence</h3>
+                    <p>Building dreams since 1998</p>
+                </div>
+                
+                <div class="service-card" style="background: transparent; box-shadow: none;">
+                    <h2 style="font-size: 3rem; color: var(--gold);">98%</h2>
+                    <h3>Client Satisfaction</h3>
+                    <p>Our commitment to excellence</p>
+                </div>
             </div>
         </div>
     </section>
@@ -76,12 +188,49 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Haven <span>Homes</span></div>
+                    <p>Creating extraordinary living experiences through exceptional design, craftsmanship, and attention to detail.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul>
+                        <li><a href="services.html#custom-homes">Custom Homes</a></li>
+                        <li><a href="services.html#renovations">Renovations</a></li>
+                        <li><a href="services.html#interior-design">Interior Design</a></li>
+                        <li><a href="services.html#landscape-design">Landscape Design</a></li>
+                        <li><a href="services.html">Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to receive updates on our latest projects and design insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="Your Email Address">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
             </div>
-            <p class="copyright">© <span id="currentYear"></span> Advent Agency | Crafted with precision. Built for visionaries.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Haven Homes. All Rights Reserved. | Luxury Home Builders</p>
+            </div>
         </div>
     </footer>
 
