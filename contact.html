@@ -54,44 +54,50 @@
             <div class="about-content fade-in">
                 <h2>Get In Touch</h2>
                 <p>Ready for a website that matches the caliber of your work? We'd love to hear about your project and discuss how we can help elevate your digital presence.</p>
-                
-                <!-- SilentForms lead-capture form -->
+
+                <!-- StaticForms integration -->
                 <div class="contact-form">
-                    <form action="/server/api/submit" method="POST">
-                        <!-- Access key required by SilentForms -->
-                        <input type="hidden" name="accessKey" value="7c8f948997a873cf4d5bdd881a9b08ea8243c68d61d2ae7dfb2da3ecc3ef10cb">
-                        
+                    <form action="https://api.staticforms.dev/submit" method="POST">
+                        <!-- Replace with the key StaticForms gave you -->
+                        <input type="hidden" name="apiKey" value="sf_2e9n9a9ggm51l0hl09bd5efn">
+
                         <div class="form-group">
                             <input type="text" class="form-control" name="name" placeholder="Your Name" required>
                         </div>
+
                         <div class="form-group">
                             <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                         </div>
+
                         <div class="form-group">
                             <input type="text" class="form-control" name="company" placeholder="Company Name">
                         </div>
+
                         <div class="form-group">
-                            <select class="form-control" name="project_type" required>
+                            <select class="form-control" name="projecttype" required>
                                 <option value="" disabled selected>Project Type</option>
-                                <option value="website">New Website</option>
-                                <option value="redesign">Website Redesign</option>
-                                <option value="seo">SEO Services</option>
-                                <option value="branding">Branding</option>
-                                <option value="other">Other</option>
+                                <option value="New Website">New Website</option>
+                                <option value="Website Redesign">Website Redesign</option>
+                                <option value="SEO Services">SEO Services</option>
+                                <option value="Branding">Branding</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
+
                         <div class="form-group">
-                            <textarea class="form-control" name="message" placeholder="Tell us about your project" required></textarea>
+                            <textarea class="form-control" name="message" placeholder="Tell us about your project" rows="6" required></textarea>
                         </div>
-                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+
+                        <button type="submit" class="btn" style="width:100%;">Send Message</button>
                     </form>
                 </div>
-                
-                <div style="margin-top: 4rem; display: flex; justify-content: space-around; flex-wrap: wrap;">
-                    <div style="text-align: center; margin: 1rem;">
-                        <i class="fas fa-envelope" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
+
+                <!-- Extra contact info -->
+                <div style="margin-top:4rem;display:flex;justify-content:space-around;flex-wrap:wrap;">
+                    <div style="text-align:center;margin:1rem;">
+                        <i class="fas fa-envelope" style="font-size:2rem;color:var(--accent-color);margin-bottom:1rem;"></i>
                         <h3>Email Us</h3>
-                        <p>riekgatluak25@gmail.com</p>
+                        <p>geah2727@gmail.com</p>
                     </div>
                 </div>
             </div>
