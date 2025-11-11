@@ -3,122 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advent Agency | Luxury Web Design for Builders</title>
-    <meta name="description" content="Advent Agency creates exceptional digital experiences for luxury and custom home builders. Websites that match the quality of your craftsmanship.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <title>Haven Homes | Luxury Home Builder</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-mountain logo-icon"></i>
-                Advent Agency
-            </a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav id="nav">
-                <ul>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Haven <span>Homes</span></a>
+                
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="process.html">Process</a></li>
+                    <li class="dropdown">
+                        <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-plus"></i></a>
+                        <div class="dropdown-content">
+                            <a href="services.html#custom-homes">Custom Homes</a>
+                            <a href="services.html#renovations">Renovations</a>
+                            <a href="services.html#interior-design">Interior Design</a>
+                            <a href="services.html#landscape-design">Landscape Design</a>
+                        </div>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                
+                <button class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
             </nav>
         </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="mobile-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="mobile-dropdown">
+                <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-plus"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html#custom-homes">Custom Homes</a>
+                    <a href="services.html#renovations">Renovations</a>
+                    <a href="services.html#interior-design">Interior Design</a>
+                    <a href="services.html#landscape-design">Landscape Design</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-bg"></div>
-        <div class="container">
-            <div class="hero-content fade-in">
-                <h1>Elevating Luxury Builders with Exceptional Web Design</h1>
-                <p>Your website should be as remarkable as the homes you build.</p>
-                <a href="portfolio.html" class="btn">View Portfolio</a>
+    <section id="home" class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-house-exterior-and-interior-43579-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Crafting Timeless Luxury Residences</h1>
+            <p>Exquisite custom homes built with uncompromising quality and attention to detail.</p>
+            <div class="hero-btns">
+                <a href="gallery.html" class="btn">Explore Our Homes</a>
+                <a href="contact.html" class="btn btn-outline">Schedule Consultation</a>
             </div>
         </div>
+        <a href="#about" class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </a>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-heading">Design that Mirrors Craftsmanship</h2>
-            <div class="about-content fade-in">
-                <p>Advent Agency designs digital experiences for luxury and custom home builders who take pride in their craft. Our work blends modern aesthetics, precision, and storytelling that attract discerning clients.</p>
-                <p class="subtext">Each website is meticulously crafted to reflect the quality, attention to detail, and sophistication that your clients expect from a luxury home builder.</p>
-                <a href="about.html" class="btn">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <h2 class="section-heading">Featured Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Modern Luxury Home Builder Website" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Modern Luxury Home Builder Website</h3>
-                        <p class="portfolio-desc">A sophisticated digital presence for a high-end residential builder</p>
-                        <a href="portfolio.html" class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Building Dreams Since 1998</h2>
+                    <p>Haven Homes was founded with a singular vision: to create extraordinary living spaces that reflect the unique personalities and lifestyles of our clients while setting new standards for luxury, craftsmanship, and sustainability.</p>
+                    <p>Our team of award-winning architects, designers, and builders work collaboratively to transform your vision into a reality that exceeds expectations in every detail.</p>
+                    <a href="about.html" class="btn">Learn More</a>
                 </div>
-                <div class="portfolio-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1600566753052-9c61683eea44?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Custom Home Builder Portfolio" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Custom Home Builder Portfolio</h3>
-                        <p class="portfolio-desc">Showcasing bespoke residential projects with immersive galleries</p>
-                        <a href="portfolio.html" class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="portfolio-item fade-in">
-                    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Architectural Firm Website" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Architectural Firm Website</h3>
-                        <p class="portfolio-desc">A digital portfolio for a renowned architecture practice</p>
-                        <a href="portfolio.html" class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Luxury Home Exterior">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
+    <!-- Services Preview Section -->
+    <section class="services">
         <div class="container">
-            <h2 class="section-heading">Tailored Digital Solutions for Luxury Builders</h2>
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
             <div class="services-grid">
-                <div class="service-card fade-in">
+                <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-pencil-ruler"></i>
+                        <i class="fas fa-home"></i>
                     </div>
-                    <h3 class="service-title">Custom Website Design</h3>
-                    <p>Bespoke websites that reflect your brand's unique identity and showcase your portfolio with elegance and sophistication.</p>
+                    <h3>Custom Homes</h3>
+                    <p>Bespoke residences designed from the ground up to reflect your unique style and functional requirements.</p>
+                    <a href="services.html#custom-homes" class="btn">Learn More</a>
                 </div>
-                <div class="service-card fade-in">
+                
+                <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-feather-alt"></i>
+                        <i class="fas fa-tools"></i>
                     </div>
-                    <h3 class="service-title">UX & Copywriting</h3>
-                    <p>Strategic user experience design and compelling copy that tells your brand story and converts visitors into clients.</p>
+                    <h3>Renovations</h3>
+                    <p>Transform your existing space with our comprehensive renovation services that honor the original architecture.</p>
+                    <a href="services.html#renovations" class="btn">Learn More</a>
                 </div>
-                <div class="service-card fade-in">
+                
+                <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-search"></i>
+                        <i class="fas fa-couch"></i>
                     </div>
-                    <h3 class="service-title">SEO Optimization</h3>
-                    <p>Search engine optimization strategies to ensure your website ranks for high-value keywords in the luxury home market.</p>
+                    <h3>Interior Design</h3>
+                    <p>Complete interior design services that create harmonious, functional, and beautiful living environments.</p>
+                    <a href="services.html#interior-design" class="btn">Learn More</a>
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="services.html" class="btn">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview Section -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Portfolio</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Modern Luxury Home">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Contemporary Kitchen">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Elegant Living Room">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="gallery.html" class="btn">View Full Gallery</a>
             </div>
         </div>
     </section>
@@ -126,14 +175,67 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Haven <span>Homes</span></div>
+                    <p>Creating extraordinary living experiences through exceptional design, craftsmanship, and attention to detail.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul>
+                        <li><a href="services.html#custom-homes">Custom Homes</a></li>
+                        <li><a href="services.html#renovations">Renovations</a></li>
+                        <li><a href="services.html#interior-design">Interior Design</a></li>
+                        <li><a href="services.html#landscape-design">Landscape Design</a></li>
+                        <li><a href="services.html">Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to receive updates on our latest projects and design insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="Your Email Address">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
             </div>
-            <p class="copyright">© <span id="currentYear"></span> Advent Agency | Crafted with precision. Built for visionaries.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Haven Homes. All Rights Reserved. | Luxury Home Builders</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Image Modal -->
+    <div class="modal" id="imageModal">
+        <div class="modal-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-nav modal-prev">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="modal-nav modal-next">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="modal-content">
+            <img src="" alt="Gallery Image">
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
