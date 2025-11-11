@@ -3,289 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Development Services | Advent Agency</title>
-    <meta name="description" content="Advent Agency specializes in custom website development for luxury home builders. We create exceptional digital experiences that showcase your craftsmanship.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <title>Our Services | Haven Homes | Luxury Home Builder</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Additional styles specific to services page */
-        .service-detail {
-            margin: 4rem 0;
-        }
-        
-        .service-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .service-feature {
-            padding: 1.5rem;
-            background-color: white;
-            border-left: 3px solid var(--accent-color);
-        }
-        
-        .service-feature h4 {
-            margin-bottom: 0.5rem;
-            color: var(--accent-color);
-        }
-        
-        .pricing-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-        }
-        
-        .pricing-table th, .pricing-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .pricing-table th {
-            background-color: var(--accent-color);
-            color: white;
-            font-weight: 500;
-        }
-        
-        .pricing-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        
-        .package-name {
-            font-weight: 600;
-            color: var(--text-color);
-        }
-        
-        .package-price {
-            font-weight: 700;
-            color: var(--accent-color);
-            font-size: 1.25rem;
-        }
-        
-        @media (max-width: 768px) {
-            .pricing-table {
-                display: block;
-                overflow-x: auto;
-            }
-        }
-    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-mountain logo-icon"></i>
-                Advent Agency
-            </a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav id="nav">
-                <ul>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Haven <span>Homes</span></a>
+                
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="process.html">Process</a></li>
+                    <li class="dropdown">
+                        <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-plus"></i></a>
+                        <div class="dropdown-content">
+                            <a href="services.html#custom-homes">Custom Homes</a>
+                            <a href="services.html#renovations">Renovations</a>
+                            <a href="services.html#interior-design">Interior Design</a>
+                            <a href="services.html#landscape-design">Landscape Design</a>
+                        </div>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                
+                <button class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
             </nav>
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="page-hero-bg"></div>
-        <div class="container">
-            <div class="hero-content fade-in">
-                <h1>Website Development Services</h1>
-                <p>Custom websites designed specifically for luxury home builders</p>
-            </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="mobile-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="mobile-dropdown">
+                <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-plus"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html#custom-homes">Custom Homes</a>
+                    <a href="services.html#renovations">Renovations</a>
+                    <a href="services.html#interior-design">Interior Design</a>
+                    <a href="services.html#landscape-design">Landscape Design</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Header -->
+    <section class="hero" style="height: 60vh; background: linear-gradient(rgba(44, 44, 44, 0.7), rgba(44, 44, 44, 0.7)), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1>Our Services</h1>
+            <p>Comprehensive luxury home building and design services tailored to your vision and lifestyle.</p>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services">
+    <section id="custom-homes" class="services">
         <div class="container">
-            <h2 class="section-heading">Our Website Development Services</h2>
+            <div class="section-title">
+                <h2>Custom Home Building</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Vision, Our Expertise</h3>
+                    <p>We specialize in creating completely custom residences from the ground up, designed specifically for your lifestyle, preferences, and site conditions. Our comprehensive approach ensures every detail aligns with your vision.</p>
+                    <p>From initial site selection and architectural design to the final finishing touches, we guide you through every step of the process. Our team of architects, designers, and craftsmen work collaboratively to bring your dream home to life.</p>
+                    <p>We utilize the latest construction technologies while maintaining traditional craftsmanship standards, resulting in homes that are both technologically advanced and built to last for generations.</p>
+                    <a href="contact.html" class="btn">Start Your Project</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Custom Home">
+                </div>
+            </div>
+            <div class="services-grid" style="margin-top: 60px;">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Architectural Design</h3>
+                    <p>Custom architectural solutions that reflect your personal style while optimizing functionality and flow.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Construction Management</h3>
+                    <p>Comprehensive project oversight ensuring quality, timeline adherence, and budget management.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Turnkey Delivery</h3>
+                    <p>Complete home delivery from concept to completion, including all finishes and landscaping.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Renovations Section -->
+    <section id="renovations" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Luxury Renovations</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1540518614846-7eded1027f2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Home Renovation">
+                </div>
+                <div class="about-text">
+                    <h3>Transform Your Existing Space</h3>
+                    <p>Breathe new life into your current home with our comprehensive renovation services. We specialize in transforming existing spaces to better suit your evolving needs while enhancing value and functionality.</p>
+                    <p>Our renovation projects range from kitchen and bathroom remodels to whole-house transformations and historical restorations. We approach each project with sensitivity to the original architecture while introducing modern comforts and technologies.</p>
+                    <p>We manage the entire process, including design, permits, construction, and finishing, ensuring minimal disruption to your daily life while achieving exceptional results.</p>
+                    <a href="contact.html" class="btn">Discuss Your Renovation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interior Design Section -->
+    <section id="interior-design" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Interior Design</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Curated Living Spaces</h3>
+                    <p>Our interior design services create harmonious, functional, and beautiful living environments that reflect your personality and enhance your daily life. We believe that interiors should be both aesthetically pleasing and practically functional.</p>
+                    <p>We work with a curated selection of premium materials, furnishings, and finishes to create spaces that feel cohesive, comfortable, and uniquely yours. From furniture selection and custom millwork to lighting design and art curation, we attend to every detail.</p>
+                    <p>Our design philosophy balances timeless elegance with contemporary sensibilities, creating interiors that will remain beautiful and relevant for years to come.</p>
+                    <a href="contact.html" class="btn">Explore Design Services</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1615529162863-55b5bbcb8d33?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Interior Design">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Landscape Design Section -->
+    <section id="landscape-design" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Landscape Design</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1585329063179-50368791d953?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Landscape Design">
+                </div>
+                <div class="about-text">
+                    <h3>Seamless Indoor-Outdoor Living</h3>
+                    <p>Extend your living space beyond your walls with our comprehensive landscape design services. We create outdoor environments that are both beautiful and functional, seamlessly integrating with your home's architecture and interior design.</p>
+                    <p>Our landscape designs include everything from elegant gardens and outdoor kitchens to swimming pools, fire features, and sophisticated lighting systems. We consider how you want to use your outdoor spaces and create designs that enhance your lifestyle.</p>
+                    <p>We specialize in creating sustainable landscapes that thrive in our climate while providing year-round beauty and enjoyment with minimal maintenance requirements.</p>
+                    <a href="contact.html" class="btn">Design Your Outdoor Space</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Process</h2>
+            </div>
             <div class="services-grid">
-                <div class="service-card fade-in">
+                <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-pencil-ruler"></i>
+                        <span style="font-family: 'Playfair Display'; font-size: 2rem; color: var(--gold);">01</span>
                     </div>
-                    <h3 class="service-title">Custom Website Design</h3>
-                    <p>Bespoke websites that reflect your brand's unique identity and showcase your portfolio with elegance and sophistication.</p>
-                    <div class="service-features">
-                        <div class="service-feature">
-                            <h4>Responsive Design</h4>
-                            <p>Flawless experience on all devices from desktop to mobile</p>
-                        </div>
-                        <div class="service-feature">
-                            <h4>Portfolio Galleries</h4>
-                            <p>Showcase your projects with stunning image galleries</p>
-                        </div>
-                        <div class="service-feature">
-                            <h4>Brand Integration</h4>
-                            <p>Seamlessly incorporate your visual identity</p>
-                        </div>
-                    </div>
+                    <h3>Discovery & Planning</h3>
+                    <p>We begin with in-depth consultations to understand your vision, needs, and budget, developing a comprehensive project plan.</p>
                 </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-feather-alt"></i>
-                    </div>
-                    <h3 class="service-title">UX & Copywriting</h3>
-                    <p>Strategic user experience design and compelling copy that tells your brand story and converts visitors into clients.</p>
-                    <div class="service-features">
-                        <div class="service-feature">
-                            <h4>User Journey Mapping</h4>
-                            <p>Intuitive navigation that guides visitors to conversion</p>
-                        </div>
-                        <div class="service-feature">
-                            <h4>Conversion-Focused Copy</h4>
-                            <p>Compelling content that tells your story and drives action</p>
-                        </div>
-                        <div class="service-feature">
-                            <h4>Content Strategy</h4>
-                            <p>Strategic content planning that showcases your expertise</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3 class="service-title">SEO Optimization</h3>
-                    <p>Search engine optimization strategies to ensure your website ranks for high-value keywords in the luxury home market.</p>
-                    <div class="service-features">
-                        <div class="service-feature">
-                            <h4>Keyword Strategy</h4>
-                            <p>Target high-value search terms in your market</p>
-                        </div>
-                        <div class="service-feature">
-                            <h4>On-Page Optimization</h4>
-                            <p>Technical SEO that improves search visibility</p>
-                        </div>
-                        <div class="service-feature">
-                            <h4>Local SEO</h4>
-                            <p>Optimize for local search in your service areas</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Website Packages Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content fade-in">
-                <h2>Website Development Packages</h2>
-                <p>We offer tailored website development packages designed specifically for luxury home builders. Each package includes our core services with different levels of customization and features.</p>
                 
-                <table class="pricing-table">
-                    <thead>
-                        <tr>
-                            <th>Package</th>
-                            <th>Features</th>
-                            <th>Timeline</th>
-                            <th>Investment</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="package-name">Essential</td>
-                            <td>
-                                <ul>
-                                    <li>5-Page Custom Website</li>
-                                    <li>Responsive Design</li>
-                                    <li>Basic Portfolio Gallery</li>
-                                    <li>Contact Form</li>
-                                </ul>
-                            </td>
-                            <td>4-5 Weeks</td>
-                            <td class="package-price">$4,500</td>
-                        </tr>
-                        <tr>
-                            <td class="package-name">Professional</td>
-                            <td>
-                                <ul>
-                                    <li>8-Page Custom Website</li>
-                                    <li>Advanced Portfolio with Filtering</li>
-                                    <li>Project Case Studies</li>
-                                    <li>SEO Optimization</li>
-                                    <li>Content Management System</li>
-                                </ul>
-                            </td>
-                            <td>6-8 Weeks</td>
-                            <td class="package-price">$7,500</td>
-                        </tr>
-                        <tr>
-                            <td class="package-name">Premium</td>
-                            <td>
-                                <ul>
-                                    <li>12+ Page Custom Website</li>
-                                    <li>Immersive Project Galleries</li>
-                                    <li>Advanced Animations</li>
-                                    <li>Comprehensive SEO Strategy</li>
-                                    <li>Custom Content Management</li>
-                                    <li>Ongoing Support Package</li>
-                                </ul>
-                            </td>
-                            <td>8-12 Weeks</td>
-                            <td class="package-price">$12,000+</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span style="font-family: 'Playfair Display'; font-size: 2rem; color: var(--gold);">02</span>
+                    </div>
+                    <h3>Design & Development</h3>
+                    <p>Our team creates detailed designs and specifications, refining them until they perfectly capture your vision.</p>
+                </div>
                 
-                <p class="subtext" style="text-align: center;">All packages include a dedicated project manager, responsive design, and basic training. Custom packages are available for unique requirements.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Overview -->
-    <section class="process">
-        <div class="container">
-            <h2 class="section-heading">Our Development Process</h2>
-            <div class="process-steps">
-                <div class="process-step fade-in">
-                    <div class="step-number">01</div>
-                    <h3 class="step-title">Discovery & Strategy</h3>
-                    <p>We begin with an in-depth consultation to understand your brand, target audience, and project goals.</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span style="font-family: 'Playfair Display'; font-size: 2rem; color: var(--gold);">03</span>
+                    </div>
+                    <h3>Construction & Craftsmanship</h3>
+                    <p>We execute the project with precision and care, maintaining constant communication and quality control throughout.</p>
                 </div>
-                <div class="process-step fade-in">
-                    <div class="step-number">02</div>
-                    <h3 class="step-title">Design & Prototyping</h3>
-                    <p>Creating elegant, user-centric designs that reflect your brand's sophistication and attention to detail.</p>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span style="font-family: 'Playfair Display'; font-size: 2rem; color: var(--gold);">04</span>
+                    </div>
+                    <h3>Completion & Follow-up</h3>
+                    <p>We ensure every detail is perfect before handing over your completed project, with ongoing support as needed.</p>
                 </div>
-                <div class="process-step fade-in">
-                    <div class="step-number">03</div>
-                    <h3 class="step-title">Development</h3>
-                    <p>Building your website with precision using the latest technologies for performance and reliability.</p>
-                </div>
-                <div class="process-step fade-in">
-                    <div class="step-number">04</div>
-                    <h3 class="step-title">Launch & Support</h3>
-                    <p>We ensure a seamless launch and provide ongoing support to maintain your digital presence.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content fade-in">
-                <h2>Ready to Elevate Your Digital Presence?</h2>
-                <p>Let's discuss how our website development services can help you attract more clients and showcase your work effectively.</p>
-                <a href="contact.html" class="btn">Get in Touch</a>
             </div>
         </div>
     </section>
@@ -293,12 +226,49 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Haven <span>Homes</span></div>
+                    <p>Creating extraordinary living experiences through exceptional design, craftsmanship, and attention to detail.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul>
+                        <li><a href="services.html#custom-homes">Custom Homes</a></li>
+                        <li><a href="services.html#renovations">Renovations</a></li>
+                        <li><a href="services.html#interior-design">Interior Design</a></li>
+                        <li><a href="services.html#landscape-design">Landscape Design</a></li>
+                        <li><a href="services.html">Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to receive updates on our latest projects and design insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="Your Email Address">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
             </div>
-            <p class="copyright">© <span id="currentYear"></span> Advent Agency | Crafted with precision. Built for visionaries.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Haven Homes. All Rights Reserved. | Luxury Home Builders</p>
+            </div>
         </div>
     </footer>
 
