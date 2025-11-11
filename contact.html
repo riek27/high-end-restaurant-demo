@@ -57,8 +57,9 @@
                 
                 <!-- SilentForms lead-capture form -->
                 <div class="contact-form">
-                    <form action="https://silentforms.com/s/7c8f948997a873cf4d5bdd881a9b08ea8243c68d61d2ae7dfb2da3ecc3ef10cb" method="POST">
-                        <input type="hidden" name="form_token" value="7c8f948997a873cf4d5bdd881a9b08ea8243c68d61d2ae7dfb2da3ecc3ef10cb">
+                    <form action="/server/api/submit" method="POST">
+                        <!-- Access key required by SilentForms -->
+                        <input type="hidden" name="accessKey" value="7c8f948997a873cf4d5bdd881a9b08ea8243c68d61d2ae7dfb2da3ecc3ef10cb">
                         
                         <div class="form-group">
                             <input type="text" class="form-control" name="name" placeholder="Your Name" required>
