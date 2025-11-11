@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gallery | Haven Homes | Luxury Home Builder</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">Haven <span>Homes</span></a>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-plus"></i></a>
+                        <div class="dropdown-content">
+                            <a href="services.html#custom-homes">Custom Homes</a>
+                            <a href="services.html#renovations">Renovations</a>
+                            <a href="services.html#interior-design">Interior Design</a>
+                            <a href="services.html#landscape-design">Landscape Design</a>
+                        </div>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <button class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="mobile-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="mobile-dropdown">
+                <a href="services.html" class="dropdown-toggle">Services <i class="fas fa-plus"></i></a>
+                <div class="dropdown-content">
+                    <a href="services.html#custom-homes">Custom Homes</a>
+                    <a href="services.html#renovations">Renovations</a>
+                    <a href="services.html#interior-design">Interior Design</a>
+                    <a href="services.html#landscape-design">Landscape Design</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Header -->
+    <section class="hero" style="height: 60vh; background: linear-gradient(rgba(44, 44, 44, 0.7), rgba(44, 44, 44, 0.7)), url('https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1>Our Portfolio</h1>
+            <p>A curated collection of our finest custom homes, renovations, and design projects.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="services" style="padding: 50px 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Projects</h2>
+            </div>
+            <div style="text-align: center; margin-bottom: 40px;">
+                <button class="btn filter-btn active" data-filter="all">All Projects</button>
+                <button class="btn filter-btn" data-filter="custom">Custom Homes</button>
+                <button class="btn filter-btn" data-filter="renovation">Renovations</button>
+                <button class="btn filter-btn" data-filter="interior">Interior Design</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="custom">
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Modern Luxury Home">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <div style="position: absolute; bottom: 20px; left: 20px; text-align: left;">
+                            <h3 style="color: white; margin-bottom: 5px;">Hilltop Residence</h3>
+                            <p style="color: var(--gold);">Custom Home</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="interior">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Contemporary Kitchen">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <div style="position: absolute; bottom: 20px; left: 20px; text-align: left;">
+                            <h3 style="color: white; margin-bottom: 5px;">Modern Kitchen</h3>
+                            <p style="color: var(--gold);">Interior Design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="interior">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Elegant Living Room">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <div style="position: absolute; bottom: 20px; left: 20px; text-align: left;">
+                            <h3 style="color: white; margin-bottom: 5px;">Urban Living Room</h3>
+                            <p style="color: var(--gold);">Interior Design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="renovation">
+                    <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Luxury Bathroom">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <div style="position: absolute; bottom: 20px; left: 20px; text-align: left;">
+                            <h3 style="color: white; margin-bottom: 5px;">Spa Bathroom</h3>
+                            <p style="color: var(--gold);">Renovation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="custom">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Modern Bedroom">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <div style="position: absolute; bottom: 20px; left: 20px; text-align: left;">
+                            <h3 style="color: white; margin-bottom: 5px;">Master Suite</h3>
+                            <p style="color: var(--gold);">Custom Home</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="custom">
+                    <img src="https://images.unsplash.com/photo-1600607688962-8b8a5c6c2c8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Outdoor Living Space">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <div style="position: absolute; bottom: 20px; left: 20px; text-align: left;">
+                            <h3 style="color: white; margin-bottom: 5px;">Poolside Oasis</h3>
+                            <p style="color: var(--gold);">Custom Home</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="renovation">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Outdoor Living">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <div style="position: absolute; bottom: 20px; left: 20px; text-align: left;">
+                            <h3 style="color: white; margin-bottom: 5px;">Garden Renovation</h3>
+                            <p style="color: var(--gold);">Renovation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="interior">
+                    <img src="https://images.unsplash.com/photo-1615529162863-55b5bbcb8d33?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kitchen Design">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <div style="position: absolute; bottom: 20px; left: 20px; text-align: left;">
+                            <h3 style="color: white; margin-bottom: 5px;">Chef's Kitchen</h3>
+                            <p style="color: var(--gold);">Interior Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Showcase -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Project: Cliffside Residence</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Modern Elegance Meets Natural Beauty</h3>
+                    <p>This spectacular cliffside residence represents the pinnacle of our custom home building expertise. Perched dramatically above the ocean, the home was designed to maximize panoramic views while creating intimate, comfortable living spaces.</p>
+                    <p>The project presented significant engineering challenges due to the steep site, which we overcame with innovative foundation solutions and cantilevered design elements. Floor-to-ceiling glass walls provide uninterrupted ocean views while maintaining structural integrity and energy efficiency.</p>
+                    <p>Inside, the home features custom millwork throughout, premium European appliances, and a sophisticated smart home system that controls lighting, climate, security, and entertainment. The interior palette was carefully curated to complement the natural surroundings, with neutral tones and organic materials.</p>
+                    <a href="contact.html" class="btn">Start Your Project</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cliffside Residence">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Haven <span>Homes</span></div>
+                    <p>Creating extraordinary living experiences through exceptional design, craftsmanship, and attention to detail.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul>
+                        <li><a href="services.html#custom-homes">Custom Homes</a></li>
+                        <li><a href="services.html#renovations">Renovations</a></li>
+                        <li><a href="services.html#interior-design">Interior Design</a></li>
+                        <li><a href="services.html#landscape-design">Landscape Design</a></li>
+                        <li><a href="services.html">Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to receive updates on our latest projects and design insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="Your Email Address">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Haven Homes. All Rights Reserved. | Luxury Home Builders</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div class="modal" id="imageModal">
+        <div class="modal-close">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-nav modal-prev">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="modal-nav modal-next">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="modal-content">
+            <img src="" alt="Gallery Image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
