@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <!-- Header -->
     <header id="header">
         <div class="container header-container">
@@ -54,19 +55,22 @@
                 <h2>Get In Touch</h2>
                 <p>Ready for a website that matches the caliber of your work? We'd love to hear about your project and discuss how we can help elevate your digital presence.</p>
                 
+                <!-- SilentForms lead-capture form -->
                 <div class="contact-form">
-                    <form>
+                    <form action="https://silentforms.com/s/7c8f948997a873cf4d5bdd881a9b08ea8243c68d61d2ae7dfb2da3ecc3ef10cb" method="POST">
+                        <input type="hidden" name="form_token" value="7c8f948997a873cf4d5bdd881a9b08ea8243c68d61d2ae7dfb2da3ecc3ef10cb">
+                        
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
+                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Company Name">
+                            <input type="text" class="form-control" name="company" placeholder="Company Name">
                         </div>
                         <div class="form-group">
-                            <select class="form-control" required>
+                            <select class="form-control" name="project_type" required>
                                 <option value="" disabled selected>Project Type</option>
                                 <option value="website">New Website</option>
                                 <option value="redesign">Website Redesign</option>
@@ -76,7 +80,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="Tell us about your project" required></textarea>
+                            <textarea class="form-control" name="message" placeholder="Tell us about your project" required></textarea>
                         </div>
                         <button type="submit" class="btn" style="width: 100%;">Send Message</button>
                     </form>
@@ -87,7 +91,6 @@
                         <i class="fas fa-envelope" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
                         <h3>Email Us</h3>
                         <p>hello@adventagency.com</p>
-                    </div>
                     </div>
                 </div>
             </div>
